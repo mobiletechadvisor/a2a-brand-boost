@@ -8,7 +8,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-blue-600">QMed</div>
+            <img 
+              src="https://hello.qmed.asia/lovable-uploads/54a95437-19aa-4389-a978-29d1646c761d.png" 
+              alt="QMed" 
+              className="h-8"
+            />
           </div>
           
           <nav className="hidden md:flex space-x-8">
