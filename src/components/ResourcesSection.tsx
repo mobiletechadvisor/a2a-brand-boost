@@ -57,7 +57,7 @@ const ResourcesSection = () => {
               Begin Your Journey to HCP Advocacy
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Embrace the future of HCP engagement with Docquity. Contact us to unlock the full potential 
+              Embrace the future of HCP engagement with QMed. Contact us to unlock the full potential 
               of digital advocacy for your brand. The digital transformation of healthcare marketing is 
               advancing rapidly. Don't get left behind.
             </p>

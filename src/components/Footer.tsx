@@ -1,12 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   const footerLinks = {
-    "Resources": ["Blog", "Wall of Love", "Learn with Docquity"],
+    "Resources": ["Blog", "Wall of Love", "Learn with QMed"],
     "Company": ["About Us", "Careers", "Contact Us"],
-    "Solutions": ["Docquity App", "Awareness to Advocacy (A2A)", "Hiring Solutions", "Jobs for Doctors"]
+    "Solutions": ["QMed App", "Awareness to Advocacy (A2A)", "Hiring Solutions", "Jobs for Doctors"]
   };
 
   return (
@@ -14,7 +13,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="text-2xl font-bold text-blue-400 mb-4">Docquity</div>
+            <div className="text-2xl font-bold text-blue-400 mb-4">QMed</div>
             <p className="text-gray-400 mb-6">
               Leading the digital transformation of healthcare engagement across Southeast Asia.
             </p>
@@ -60,7 +59,7 @@ const Footer = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>© 2023 | Docquity.com. All rights reserved</p>
+            <p>© 2023 | QMed.com. All rights reserved</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

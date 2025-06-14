@@ -15,7 +15,7 @@ const HeroSection = () => {
           
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in delay-200">
             Step into an era of strategic HCP engagement where awareness evolves into advocacy. 
-            Propel your pharmaceutical brand to new heights with Docquity's targeted, 
+            Propel your pharmaceutical brand to new heights with QMed's targeted, 
             data-driven approach in Southeast Asia.
           </p>
           
@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className="mt-16">
           <p className="text-center text-gray-600 mb-8">Trusted across the entire medical landscape</p>
           <p className="text-center text-sm text-gray-500 mb-8">
-            The leading names in healthcare trust Docquity to amplify their message to HCPs.<br />
+            The leading names in healthcare trust QMed to amplify their message to HCPs.<br />
             See who's already advancing with our A2A program.
           </p>
           
