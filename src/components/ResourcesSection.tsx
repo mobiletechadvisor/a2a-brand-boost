@@ -1,9 +1,23 @@
 
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import React from "react";
+
 // ArrowRight removed as "Read More" is not in Figma card
 // Card and CardContent removed as they are not used
 
 const ResourcesSection = () => {
+  const [api, setApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+  const [count, setCount] = React.useState(0)
+
   const articlesData = [
     {
       id: "cancer-care",
@@ -31,6 +45,19 @@ const ResourcesSection = () => {
   // TODO: Implement actual carousel logic for active slide if needed for progress bar
   // const activeSlide = 0; // Placeholder for carousel state
 
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1440px] mx-auto px-[158px] flex flex-col gap-10"> {/* Reduced gap slightly */}
@@ -49,31 +76,35 @@ const ResourcesSection = () => {
         </p>
         
         {/* Articles Carousel */}
-        <div className="flex overflow-x-auto space-x-6 pb-4 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"> {/* Increased space-x */}
-          {articlesData.map((article) => (
-            <div 
-              key={article.id} 
-              className={`flex-shrink-0 ${article.widthClass} h-[280px] rounded-xl overflow-hidden relative group cursor-pointer shadow-lg border border-gray-200`} // Increased height, rounded-xl, added shadow & border
-            >
-              <img src={article.image} alt={article.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 p-6 w-full">
-                <h3 className="font-roboto text-2xl font-semibold text-white mb-1 leading-8"> {/* Added font-roboto, Updated styles for card title */}
-                  {article.title}
-                </h3>
-                <p className="font-manrope text-xs font-semibold text-white leading-normal">{article.author}</p> {/* Added font-manrope, Updated styles for card author */}
-              </div>
-            </div>
-          ))}
-        </div>
+        <Carousel setApi={setApi} className="w-full">
+          <CarouselContent className="-ml-6"> {/* Adjust margin to counteract item padding if needed */}
+            {articlesData.map((article, index) => (
+              <CarouselItem key={index} className="pl-6 basis-1/3"> {/* Adjust padding and basis for 3 items per view */}
+                <div 
+                  className={`h-[280px] rounded-xl overflow-hidden relative group cursor-pointer shadow-lg border border-gray-200`} // Removed widthClass, height increased
+                >
+                  <img src={article.image} alt={article.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-0 left-0 p-6 w-full">
+                    <h3 className="font-roboto text-2xl font-semibold text-white mb-1 leading-8"> {/* Added font-roboto, Updated styles for card title */}
+                      {article.title}
+                    </h3>
+                    <p className="font-manrope text-xs font-semibold text-white leading-normal">{article.author}</p> {/* Added font-manrope, Updated styles for card author */}
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-[-25px] top-1/2 -translate-y-1/2 z-10" />
+          <CarouselNext className="absolute right-[-25px] top-1/2 -translate-y-1/2 z-10" />
+        </Carousel>
 
-        {/* Progress Bar - kept similar, adjust activeSlide if carousel is implemented */}
-        <div className="flex justify-center space-x-2 mt-2"> {/* Adjusted margin */}
-          {articlesData.map((_, index) => (
+        {/* Progress Bar - updated to reflect carousel state */}
+        <div className="flex justify-center space-x-2 mt-8"> {/* Increased margin top */}
+          {Array.from({ length: count }).map((_, index) => (
             <div 
               key={index} 
-              // className={`h-2 rounded-full transition-all duration-300 ${index === activeSlide ? 'w-8 bg-[#1B4A52]' : 'w-4 bg-gray-300'}`} // Example active state
-              className={`h-2 rounded-full transition-all duration-300 ${index === 0 ? 'w-8 bg-[#C3D4D7]' : 'w-4 bg-[#E2E8F0]'}`} // Kept original active state for first dot
+              className={`h-2 rounded-full transition-all duration-300 ${index === current - 1 ? 'w-8 bg-[#1B4A52]' : 'w-4 bg-gray-300'}`}
             ></div>
           ))}
         </div>

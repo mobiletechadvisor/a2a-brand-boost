@@ -19,7 +19,7 @@ const HeroSection = () => {
 
           {/* Right Column: Text and Button - Based on Figma node 1:3111 */}
           <div className="md:w-1/2 text-left"> {/* Text aligned left */}
-            <h1 className="font-lexend text-[48px] font-medium text-[#1D1919] mb-8 leading-[54px] tracking-tight"> {/* Added font-lexend, Updated color, line height, letter spacing */}
+            <h1 className="font-roboto text-[32px] font-semibold text-[#1D1919] mb-8 leading-tight"> {/* Changed font, size, weight, leading */}
               Bridging Your Brand Communication<br />
               with Our <span className="bg-gradient-to-r from-[#00B5D5] to-[#1B4A52] text-transparent bg-clip-text">Online to Offline <br />
               (O2O) Engage</span> Program
