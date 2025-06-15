@@ -1,3 +1,4 @@
+
 const TrustedBySection = () => {
   const logos = [
     { src: "/img/client-logo-1.png", alt: "AstraZeneca" },
@@ -30,7 +31,15 @@ const TrustedBySection = () => {
           <div className="flex animate-scroll-logos">
             {duplicatedLogos.map((logo, index) => (
               <div key={index} className="flex-shrink-0 w-[269px] h-[124px] flex items-center justify-center border border-[#EEEEEE] rounded-2xl mx-2 shadow-[0px_1px_60px_0px_rgba(0,0,0,0.05)]">
-                <img src={logo.src} alt={logo.alt} className="max-h-[90px] max-w-[200px] object-contain" />
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  className="max-h-[90px] max-w-[200px] object-contain"
+                  onError={(e) => {
+                    console.log(`Failed to load image: ${logo.src}`);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
               </div>
             ))}
           </div>
@@ -39,7 +48,15 @@ const TrustedBySection = () => {
           <div className="flex animate-scroll-logos-reverse">
             {duplicatedLogos.slice(logos.length / 2).concat(duplicatedLogos.slice(0, logos.length / 2)).map((logo, index) => (
               <div key={index} className="flex-shrink-0 w-[269px] h-[124px] flex items-center justify-center border border-[#EEEEEE] rounded-2xl mx-2 shadow-[0px_1px_60px_0px_rgba(0,0,0,0.05)]">
-                <img src={logo.src} alt={logo.alt} className="max-h-[90px] max-w-[200px] object-contain" />
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  className="max-h-[90px] max-w-[200px] object-contain"
+                  onError={(e) => {
+                    console.log(`Failed to load image: ${logo.src}`);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
               </div>
             ))}
           </div>
