@@ -1,43 +1,41 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+// ArrowRight is removed as it's not in the Figma design for this button
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in">
-            Elevate Your Brand<br />
-            with Our <span className="text-blue-600">Awareness<br />
-            to Advocacy (A2A)</span> Program
-          </h1>
+    <section className="bg-gradient-to-r from-white to-[#E9EFEF] pt-10 pb-14"> {/* Adjusted padding and gradient based on Figma node 1:3041 */}
+      <div className="max-w-[1440px] mx-auto px-[158px]"> {/* Adjusted padding and max-width based on Figma */}
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16"> {/* Two-column layout */}
           
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in delay-200">
-            Step into an era of strategic HCP engagement where awareness evolves into advocacy. 
-            Propel your pharmaceutical brand to new heights with QMed's targeted, 
-            data-driven approach in Southeast Asia.
-          </p>
-          
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg animate-fade-in delay-300">
-            Get In Touch
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
-        
-        <div className="mt-16">
-          <p className="text-center text-gray-600 mb-8">Trusted across the entire medical landscape</p>
-          <p className="text-center text-sm text-gray-500 mb-8">
-            The leading names in healthcare trust QMed to amplify their message to HCPs.<br />
-            See who's already advancing with our A2A program.
-          </p>
-          
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="bg-gray-200 h-12 w-32 rounded animate-pulse"></div>
-            <div className="bg-gray-200 h-12 w-32 rounded animate-pulse"></div>
-            <div className="bg-gray-200 h-12 w-32 rounded animate-pulse"></div>
-            <div className="bg-gray-200 h-12 w-32 rounded animate-pulse"></div>
+          {/* Left Column: Illustration - Based on Figma node 1:3043 */}
+          <div className="md:w-1/2 flex justify-center md:justify-start">
+            <img 
+              src="/img/Q-hero.png" 
+              alt="Qmed Hero Logo" 
+              className="w-full max-w-md md:max-w-full h-auto" // Adjusted size
+            />
           </div>
+
+          {/* Right Column: Text and Button - Based on Figma node 1:3111 */}
+          <div className="md:w-1/2 text-left"> {/* Text aligned left */}
+            <h1 className="font-lexend text-[48px] font-medium text-[#1D1919] mb-8 leading-[54px] tracking-tight"> {/* Added font-lexend, Updated color, line height, letter spacing */}
+              Bridging Your Brand Communication<br />
+              with Our <span className="bg-gradient-to-r from-[#00B5D5] to-[#1B4A52] text-transparent bg-clip-text">Online to Offline <br />
+              (O2O) Engage</span> Program
+            </h1>
+            
+            <p className="font-lexend text-lg font-medium text-[#737171] mb-12 max-w-lg leading-[26px]"> {/* Added font-lexend, Added font-medium, updated line height */}
+              Step into a future-ready solution that empowers patients and HCPs in a continuous care loop. 
+              Elevate your pharmaceutical brand to a new standard in healthcare engagement with our Engage suite.
+            </p>
+            
+            {/* Button based on Figma node 1:3115 */}
+            <Button className="bg-gradient-to-r from-[#252424] to-[#424242] hover:opacity-90 text-white px-8 py-3 text-base font-semibold rounded-xl shadow-[0px_8px_20px_0px_rgba(0,0,0,0.2)] h-11 w-[164px]">
+              Get In Touch
+            </Button>
+          </div>
+
         </div>
       </div>
     </section>

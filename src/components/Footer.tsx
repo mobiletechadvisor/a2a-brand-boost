@@ -1,68 +1,58 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"; // Removed Star
 
 const Footer = () => {
-  const footerLinks = {
-    "Resources": ["Blog", "Wall of Love", "Learn with QMed"],
-    "Company": ["About Us", "Careers", "Contact Us"],
-    "Solutions": ["QMed App", "Awareness to Advocacy (A2A)", "Hiring Solutions", "Jobs for Doctors"]
-  };
+  // Link columns removed as they are not in the new Figma text for the footer.
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <div className="text-2xl font-bold text-blue-400 mb-4">QMed</div>
-            <p className="text-gray-400 mb-6">
-              Leading the digital transformation of healthcare engagement across Southeast Asia.
-            </p>
-            <div className="flex space-x-2">
-              <div className="w-8 h-8 bg-gray-700 rounded"></div>
-              <div className="w-8 h-8 bg-gray-700 rounded"></div>
-              <div className="w-8 h-8 bg-gray-700 rounded"></div>
-            </div>
-          </div>
-          
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="font-semibold mb-4">{category}</h4>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+    <footer className="bg-black text-[#CED4DA] py-10 rounded-t-2xl">
+      <div className="max-w-[1440px] mx-auto px-[158px]">
         
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h4 className="font-semibold mb-2">Subscribe to our newsletter</h4>
-              <p className="text-gray-400 text-sm">Get the latest news and updates</p>
-            </div>
-            
-            <div className="flex space-x-2">
+        {/* Top section: Newsletter - Simplified */}
+        <div className="flex flex-col md:flex-row justify-end gap-12 mb-10"> {/* justify-end to push newsletter to the right */}
+          {/* Newsletter Section */}
+          <div className="md:w-2/5 lg:w-1/3">
+            <h4 className="font-lexend font-semibold text-white text-lg mb-3 leading-[22px]">Newsletter</h4> {/* Added font-lexend, Added line-height */}
+            <p className="font-manrope text-base font-semibold mb-5 leading-[26px]"> {/* Added font-manrope, Updated size, weight, line-height */}
+              Subscribe to our newsletter to get the latest news and updates
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2 mb-3">
               <Input 
+                type="email"
                 placeholder="Enter your email" 
-                className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
+                className="bg-[rgba(255,255,255,0.19)] border border-[#69727D] text-white placeholder-gray-300 rounded-sm h-[51px] flex-grow"
               />
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-[#E2504B] hover:bg-[#E2504B]/90 text-white font-medium text-base rounded h-[51px] px-5">
                 Subscribe
               </Button>
             </div>
+            {/* Rating stars and review text removed */}
           </div>
-          
-          <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>© 2023 | QMed.com. All rights reserved</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+
+        {/* Middle section: Social Icons - App Badges removed */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8"> {/* Centered social icons */}
+          <div className="flex space-x-3">
+            <a href="#" aria-label="Facebook" className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"><Facebook className="w-5 h-5" /></a>
+            <a href="#" aria-label="Twitter" className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"><Twitter className="w-5 h-5" /></a>
+            <a href="#" aria-label="Instagram" className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"><Instagram className="w-5 h-5" /></a>
+            <a href="#" aria-label="LinkedIn" className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"><Linkedin className="w-5 h-5" /></a>
+          </div>
+          {/* App badges removed */}
+        </div>
+        
+        {/* Divider */}
+        <hr className="border-[rgba(255,255,255,0.16)] mb-8" />
+
+        {/* Bottom section: Logo, Copyright, Legal Links - Figma node 1:3242 */}
+        <div className="font-manrope flex flex-col md:flex-row justify-between items-center text-sm"> {/* Added font-manrope to this block */}
+          <img src="https://hello.qmed.asia/lovable-uploads/54a95437-19aa-4389-a978-29d1646c761d.png" alt="QMed" className="h-[37px] mb-4 md:mb-0" /> {/* Updated src, removed brightness-0 invert */}
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6">
+            <p>© 2025 | QMed. All rights reserved</p> {/* Text from Figma node 1:3245, updated */}
+            <div className="flex space-x-6">
+              <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a> {/* Text from Figma node 1:3246 */}
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> {/* Text from Figma node 1:3247 */}
             </div>
           </div>
         </div>

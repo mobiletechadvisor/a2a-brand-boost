@@ -109,6 +109,14 @@
   .delay-300 {
     animation-delay: 0.3s;
   }
+
+  .animate-scroll-logos {
+    animation: scroll-logos 40s linear infinite;
+  }
+
+  .animate-scroll-logos-reverse {
+    animation: scroll-logos-reverse 40s linear infinite;
+  }
 }
 
 @keyframes fadeIn {
@@ -119,5 +127,23 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll by half the width (since logos are duplicated) */
+  }
+}
+
+@keyframes scroll-logos-reverse {
+  0% {
+    transform: translateX(-50%); /* Start from the end of the first set */
+  }
+  100% {
+    transform: translateX(0%); 
   }
 }

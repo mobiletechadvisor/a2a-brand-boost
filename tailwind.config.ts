@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate"; // Added import
 
 export default {
 	darkMode: ["class"],
@@ -86,11 +87,17 @@ export default {
 					}
 				}
 			},
+			fontFamily: { // Added fontFamily
+        sans: ['"Lexend Deca"', 'Inter var', 'system-ui', 'sans-serif'], // Changed default sans to Lexend Deca
+        lexend: ['"Lexend Deca"', 'sans-serif'], // Specific utility for Lexend Deca
+        roboto: ['Roboto', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
+      },
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate], // Used imported variable
 } satisfies Config;
