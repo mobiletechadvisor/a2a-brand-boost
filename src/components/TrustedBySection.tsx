@@ -1,16 +1,17 @@
 
+
 const TrustedBySection = () => {
   const logos = [
     { src: "/img/client-logo-1.png", alt: "AstraZeneca" },
     { src: "/img/client-logo-2.png", alt: "GSK" },
-    { src: "https://hello.qmed.asia/lovable-uploads/04b0578b-5022-44cd-86d5-13b9484e384a.png", alt: "OncoCare Cancer Centre" },
+    { src: "/lovable-uploads/1d35c339-73e0-44d9-a9e7-6f891409195b.png", alt: "OncoCare Cancer Centre" },
     { src: "/img/client-logo-4.png", alt: "Novartis" },
-    { src: "https://hello.qmed.asia/lovable-uploads/c5cfbf45-954f-49f2-bf38-2f05949e246c.png", alt: "Spritzer" },
+    { src: "/lovable-uploads/e2070788-2561-43e9-8d89-1493eca4e49c.png", alt: "Spritzer" },
     { src: "/img/client-logo-6.png", alt: "Client Logo 6" },
-    { src: "https://hello.qmed.asia/lovable-uploads/ed845c77-cd92-4dd-9571-17e23d0fbed0.png", alt: "Homesoy" },
-    { src: "https://hello.qmed.asia/lovable-uploads/e3eee58e-518c-4382-b7d0-6f05d1592880.png", alt: "ETiQa" },
-    { src: "https://hello.qmed.asia/lovable-uploads/88f241d3-cda0-45b8-9e0b-06588dd9239a.png", alt: "UCSI University" },
-    { src: "https://hello.qmed.asia/lovable-uploads/fc3db3fb-087b-4483-9565-cee81e17a693.png", alt: "HealthLane" },
+    { src: "/lovable-uploads/3f0667a4-eb5c-41b8-934d-9bb18fb27486.png", alt: "Homesoy" },
+    { src: "/lovable-uploads/91c2daba-3a93-4ae4-b84a-141a05465d42.png", alt: "ETiQa" },
+    { src: "/lovable-uploads/78d8b872-f2c3-42a4-a725-ad5814deb245.png", alt: "UCSI University" },
+    { src: "/lovable-uploads/f847a2f6-438f-4052-a453-e6c937fd7d1f.png", alt: "HealthLane Family Pharmacy" },
   ];
 
   const duplicatedLogos = [...logos, ...logos];
