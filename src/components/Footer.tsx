@@ -10,7 +10,6 @@ const Footer = () => {
             alt="QMed" 
             className="h-6" 
           />
-          <span className="font-manrope text-base text-gray-600">qmed.asia</span>
         </div>
       </div>
     </footer>

@@ -7,8 +7,8 @@ const StatsSection = () => {
   const stats = [
     {
       id: "patient-activation",
-      title: "Patient Activation",
-      description: "AI-powered symptom checker, identifies at-risk patients anonymously and supports patients with personalized educational content. Qmed Engage Suite improves patient access to the right treatment, at the right time.",
+      title: "O2O Patient Activation",
+      description: "The Engage Suite improves patient access to the right treatment, at the right time. AI-powered symptom checker, identifies at-risk patients anonymously and supports patients with personalized educational content.",
       icon: Users, 
       iconBgColor: "bg-blue-100", 
       textColor: "text-black",
@@ -18,7 +18,7 @@ const StatsSection = () => {
     {
       id: "hcp-engagement",
       title: "HCP Network Engagement & Digital Referral Management",
-      description: "Engage Suite is at the heart of our O2O strategy, a powerful framework designed to unify Patient, HCP, and brand engagement into a measurable, scalable ecosystem.",
+      description: "Amplify your brand's influence and drive tangible results with Engage Suite. We begin by casting a wide net to elevate your brand's visibility among HCPs and facilitates digital referral, ensuring patients with concerning symptoms are escalated efficiently and appropriately, whether through GPs, specialists, or medical tourism channels.",
       icon: UsersRound, 
       iconBgColor: "bg-green-100",
       textColor: "text-black",
@@ -27,8 +27,8 @@ const StatsSection = () => {
     },
     {
       id: "captive-advertising",
-      title: "Healthcare-specific Captive Medical Advertising",
-      description: "Amplify your brand's voice with our strategy, ensuring your key messages resonate with a broader, yet targeted, medical audience. Qmed Engage suite enables a centralized digital platform that supports timely, accurate referrals - ensuring patients with concerning symptoms are escalated efficiently and appropriately, whether through GPs, specialists, or medical tourism channels. Revolutionize your marketing spend by leveraging Qmed Engage suite - delivering targeted, in-clinic messaging that drives action, while achieving over 50% in cost savings compared to conventional marketing approaches.",
+      title: "Healthcare-specific Captive Media",
+      description: "Revolutionize your marketing spend by leveraging the Engage suite. It delivers targeted, in-clinic messaging that drives patient awareness to action, while achieving over 50% in cost savings compared to conventional marketing approaches.",
       icon: DollarSign, 
       iconBgColor: "bg-purple-100",
       textColor: "text-black",

@@ -27,7 +27,7 @@ const HeroSection = () => {
             
             <p className="font-lexend text-lg font-medium text-[#737171] mb-12 max-w-lg leading-[26px]"> {/* Added font-lexend, Added font-medium, updated line height */}
               Step into a future-ready solution that empowers patients and HCPs in a continuous care loop. 
-              Elevate your pharmaceutical brand to a new standard in healthcare engagement with our Engage suite.
+              Elevate your pharmaceutical brand to a new standard in healthcare engagement with our AI-powered Engage suite.
             </p>
             
             {/* Button based on Figma node 1:3115 */}
