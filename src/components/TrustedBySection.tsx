@@ -1,5 +1,3 @@
-
-
 const TrustedBySection = () => {
   const logos = [
     { src: "/img/client-logo-1.png", alt: "AstraZeneca" },
@@ -17,13 +15,13 @@ const TrustedBySection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1440px] mx-auto px-[158px]">
-        <div className="text-center mb-12">
-          <h2 className="font-lexend text-[32px] font-medium text-black mb-6 leading-10">
+    <section className="py-12 md:py-16 lg:py-20 bg-white"> {/* Responsive section padding */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[158px]"> {/* Responsive container padding */}
+        <div className="text-center mb-10 md:mb-12"> {/* Adjusted margin */}
+          <h2 className="font-lexend text-2xl sm:text-3xl md:text-[32px] font-medium text-black mb-4 md:mb-6 leading-tight sm:leading-10"> {/* Responsive font size & margin */}
             Our Clientele
           </h2>
-          <p className="font-lexend text-lg font-medium text-[#737171] max-w-3xl mx-auto leading-[26px]">
+          <p className="font-lexend text-base sm:text-lg font-medium text-[#737171] max-w-3xl mx-auto leading-relaxed sm:leading-[26px]"> {/* Responsive font size & line height */}
             The leading names in healthcare leverage on Qmed Engage suite to transform relationships into Growth Engines
           </p>
         </div>
@@ -31,31 +29,31 @@ const TrustedBySection = () => {
         <div className="overflow-hidden">
           <div className="flex animate-scroll-logos">
             {duplicatedLogos.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[269px] h-[124px] flex items-center justify-center border border-[#EEEEEE] rounded-2xl mx-2 shadow-[0px_1px_60px_0px_rgba(0,0,0,0.05)]">
+              <div key={index} className="flex-shrink-0 w-[160px] h-[80px] sm:w-[200px] sm:h-[100px] lg:w-[269px] lg:h-[124px] flex items-center justify-center border border-[#EEEEEE] rounded-xl sm:rounded-2xl mx-1 sm:mx-2 shadow-[0px_1px_60px_0px_rgba(0,0,0,0.05)]"> {/* Responsive sizing & margin */}
                 <img 
                   src={logo.src} 
                   alt={logo.alt} 
-                  className="max-h-[90px] max-w-[200px] object-contain"
+                  className="max-h-[50px] max-w-[120px] sm:max-h-[70px] sm:max-w-[160px] lg:max-h-[90px] lg:max-w-[200px] object-contain" // Responsive image sizing
                   onError={(e) => {
                     console.log(`Failed to load image: ${logo.src}`);
-                    e.currentTarget.style.display = 'none';
+                    (e.target as HTMLImageElement).style.display = 'none';
                   }}
                 />
               </div>
             ))}
           </div>
         </div>
-        <div className="overflow-hidden mt-4">
+        <div className="overflow-hidden mt-3 sm:mt-4"> {/* Adjusted margin */}
           <div className="flex animate-scroll-logos-reverse">
             {duplicatedLogos.slice(logos.length / 2).concat(duplicatedLogos.slice(0, logos.length / 2)).map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[269px] h-[124px] flex items-center justify-center border border-[#EEEEEE] rounded-2xl mx-2 shadow-[0px_1px_60px_0px_rgba(0,0,0,0.05)]">
+              <div key={index} className="flex-shrink-0 w-[160px] h-[80px] sm:w-[200px] sm:h-[100px] lg:w-[269px] lg:h-[124px] flex items-center justify-center border border-[#EEEEEE] rounded-xl sm:rounded-2xl mx-1 sm:mx-2 shadow-[0px_1px_60px_0px_rgba(0,0,0,0.05)]"> {/* Responsive sizing & margin */}
                 <img 
                   src={logo.src} 
                   alt={logo.alt} 
-                  className="max-h-[90px] max-w-[200px] object-contain"
+                  className="max-h-[50px] max-w-[120px] sm:max-h-[70px] sm:max-w-[160px] lg:max-h-[90px] lg:max-w-[200px] object-contain" // Responsive image sizing
                   onError={(e) => {
                     console.log(`Failed to load image: ${logo.src}`);
-                    e.currentTarget.style.display = 'none';
+                    (e.target as HTMLImageElement).style.display = 'none';
                   }}
                 />
               </div>

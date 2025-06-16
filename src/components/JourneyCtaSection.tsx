@@ -2,26 +2,26 @@ import { Button } from "@/components/ui/button";
 
 const JourneyCtaSection = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-[#EAF0F0]"> {/* Background from Figma node 1:3139 */}
-      <div className="max-w-[1440px] mx-auto px-[158px] py-8 flex flex-col md:flex-row items-center gap-16 md:gap-28"> {/* Layout from Figma node 1:3139 */}
+    <section className="bg-gradient-to-b from-white to-[#EAF0F0] py-10 md:py-12 lg:py-16"> {/* Responsive section padding */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[158px] py-8 flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 xl:gap-28"> {/* Responsive container padding & gap */}
         
         {/* Left Column: Image - Based on Figma node 1:3141 */}
         <div className="md:w-1/2 flex justify-center md:justify-start order-1 md:order-none">
           <img 
             src="/img/cta-journey.png" 
             alt="Begin Your Journey" 
-            className="rounded-2xl w-full max-w-md md:max-w-[648px] h-auto" // Image from Figma 1:3143, rounded corners from 1:3142
+            className="rounded-xl sm:rounded-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-[648px] h-auto" // Responsive max-width & border-radius
           />
         </div>
 
         {/* Right Column: Text and Button - Based on Figma node 1:3144 */}
-        <div className="md:w-1/2 text-left order-2 md:order-none">
-          <h2 className="text-[32px] font-medium text-black mb-6 leading-tight"> {/* Text style from Figma node 1:3146 */}
+        <div className="md:w-1/2 text-center md:text-left order-2 md:order-none flex flex-col items-center md:items-start"> {/* Text centered on mobile, button centered */}
+          <h2 className="text-2xl sm:text-3xl md:text-[32px] font-medium text-black mb-4 sm:mb-6 leading-tight"> {/* Responsive font size & margin */}
             Begin Your Journey
             <br />
             to HCP Advocacy
           </h2>
-          <p className="text-base text-[#737171] mb-10 leading-relaxed max-w-md"> {/* Text style from Figma node 1:3147 */}
+          <p className="text-base text-[#737171] mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-md"> {/* Responsive margin */}
             Embrace the future of HCP engagement with Docquity. Contact us to unlock the full potential of digital advocacy for your brand.
             <br /><br />
             The digital transformation of healthcare marketing is advancing rapidly. Don't get left behind. Partner with Docquity to seamlessly integrate your brand into the HCP digital experience. Our team is ready to guide you through each step of the A2A program, ensuring your brand stands out in a crowded marketplace.

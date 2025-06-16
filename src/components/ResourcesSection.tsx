@@ -59,48 +59,48 @@ const ResourcesSection = () => {
   }, [api])
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1440px] mx-auto px-[158px] flex flex-col gap-10"> {/* Reduced gap slightly */}
+    <section className="py-12 md:py-16 lg:py-20 bg-white"> {/* Responsive section padding */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[158px] flex flex-col gap-8 md:gap-10"> {/* Responsive container padding & gap */}
         
         {/* Top part: Title and Button */}
-        <div className="flex justify-between items-center">
-          <h2 className="font-lexend text-[32px] font-medium text-black leading-tight"> {/* Added font-lexend, Adjusted width to fit content */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 md:gap-6"> {/* Responsive layout & gap */}
+          <h2 className="font-lexend text-2xl sm:text-3xl md:text-[32px] font-medium text-black leading-tight"> {/* Responsive font size */}
             Expanding Healthcare Networks – Insights & Resources
           </h2>
-          <Button className="bg-gradient-to-r from-[#252424] to-[#424242] hover:opacity-90 text-white px-8 py-3 text-base font-semibold rounded-xl shadow-[0px_8px_20px_0px_rgba(0,0,0,0.2)] h-11">
+          <Button className="bg-gradient-to-r from-[#252424] to-[#424242] hover:opacity-90 text-white px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-lg sm:rounded-xl shadow-[0px_8px_20px_0px_rgba(0,0,0,0.2)] h-10 sm:h-11 w-full md:w-auto mt-2 md:mt-0"> {/* Responsive padding, font size, border-radius, height & width */}
             Browse All Articles
           </Button>
         </div>
-        <p className="font-lexend text-lg font-medium text-[#737171] text-center -mt-4 mb-6 leading-[26px]"> {/* Added font-lexend, Updated styles for subtitle */}
+        <p className="font-lexend text-base sm:text-lg font-medium text-[#737171] text-center -mt-2 md:-mt-4 mb-4 md:mb-6 leading-relaxed sm:leading-[26px]"> {/* Responsive font size, line height & margins */}
           Discover how our O2O engagement solutions are transforming healthcare growth strategies
         </p>
         
         {/* Articles Carousel */}
-        <Carousel setApi={setApi} className="w-full">
-          <CarouselContent className="-ml-6"> {/* Adjust margin to counteract item padding if needed */}
+        <Carousel setApi={setApi} className="w-full" opts={{ align: "start" }}>
+          <CarouselContent className="-ml-4"> {/* Adjusted margin */}
             {articlesData.map((article, index) => (
-              <CarouselItem key={index} className="pl-6 basis-1/3"> {/* Adjust padding and basis for 3 items per view */}
+              <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"> {/* Responsive basis & padding */}
                 <div 
-                  className={`h-[280px] rounded-xl overflow-hidden relative group cursor-pointer shadow-lg border border-gray-200`} // Removed widthClass, height increased
+                  className={`h-[240px] sm:h-[260px] md:h-[280px] rounded-xl overflow-hidden relative group cursor-pointer shadow-lg border border-gray-200`} // Responsive height
                 >
                   <img src={article.image} alt={article.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 p-6 w-full">
-                    <h3 className="font-roboto text-2xl font-semibold text-white mb-1 leading-8"> {/* Added font-roboto, Updated styles for card title */}
+                  <div className="absolute bottom-0 left-0 p-4 sm:p-6 w-full"> {/* Responsive padding */}
+                    <h3 className="font-roboto text-lg sm:text-xl md:text-2xl font-semibold text-white mb-1 leading-tight sm:leading-8"> {/* Responsive font size & line height */}
                       {article.title}
                     </h3>
-                    <p className="font-manrope text-xs font-semibold text-white leading-normal">{article.author}</p> {/* Added font-manrope, Updated styles for card author */}
+                    <p className="font-manrope text-xs font-semibold text-white leading-normal">{article.author}</p>
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-[-25px] top-1/2 -translate-y-1/2 z-10" />
-          <CarouselNext className="absolute right-[-25px] top-1/2 -translate-y-1/2 z-10" />
+          <CarouselPrevious className="absolute left-0 sm:left-[-15px] md:left-[-25px] top-1/2 -translate-y-1/2 z-10 hidden sm:flex" /> {/* Adjusted position, hidden on xs */}
+          <CarouselNext className="absolute right-0 sm:right-[-15px] md:right-[-25px] top-1/2 -translate-y-1/2 z-10 hidden sm:flex" /> {/* Adjusted position, hidden on xs */}
         </Carousel>
 
         {/* Progress Bar - updated to reflect carousel state */}
-        <div className="flex justify-center space-x-2 mt-8"> {/* Increased margin top */}
+        <div className="flex justify-center space-x-2 mt-6 md:mt-8"> {/* Responsive margin top */}
           {Array.from({ length: count }).map((_, index) => (
             <div 
               key={index} 

@@ -38,41 +38,41 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white"> {/* Removed gradient, plain white background */}
-      <div className="max-w-[1440px] mx-auto px-[158px] flex flex-col md:flex-row items-start gap-16"> {/* items-start to align columns at top */}
+    <section className="py-12 md:py-16 lg:py-20 bg-white"> {/* Responsive section padding */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[158px] flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-12 lg:gap-16"> {/* Responsive container padding, items-center for mobile, adjusted gap */}
         
         {/* Left Column: Text and Button */}
-        <div className="md:w-2/5 text-left">
-          <h2 className="font-roboto text-[32px] font-semibold text-black mb-6 leading-tight"> {/* Added font-roboto */}
+        <div className="md:w-2/5 text-center md:text-left flex flex-col items-center md:items-start"> {/* Text centered on mobile, button centered */}
+          <h2 className="font-roboto text-2xl sm:text-3xl md:text-[32px] font-semibold text-black mb-4 md:mb-6 leading-tight"> {/* Responsive font size & margin */}
             The <span className="bg-gradient-to-r from-[#00B5D5] to-[#1B4A52] text-transparent bg-clip-text">O2O</span> Advantage:
             <br />
             How We Build Meaningful Patient and HCP conversations
           </h2>
-          <p className="font-lexend text-lg font-medium text-[#737171] mb-8 leading-[26px]"> {/* Added font-lexend, Re-added paragraph with Figma styles */}
+          <p className="font-lexend text-base sm:text-lg font-medium text-[#737171] mb-6 md:mb-8 leading-relaxed sm:leading-[26px]"> {/* Responsive font size, line height & margin */}
             Engage Suite is at the heart of our O2O strategy, a powerful framework designed to unify Patient, HCP, and brand engagement into a measurable, scalable ecosystem
           </p>
-          <Button className="bg-gradient-to-r from-[#252424] to-[#424242] hover:opacity-90 text-white px-8 py-3 text-base font-semibold rounded-xl shadow-[0px_8px_20px_0px_rgba(0,0,0,0.2)] h-11 w-[164px] mt-4"> {/* Adjusted margin top for button */}
+          <Button className="bg-gradient-to-r from-[#252424] to-[#424242] hover:opacity-90 text-white px-8 py-3 text-base font-semibold rounded-xl shadow-[0px_8px_20px_0px_rgba(0,0,0,0.2)] h-11 w-[164px] mt-2 md:mt-4"> {/* Adjusted margin top for button */}
             Get in Touch
           </Button>
         </div>
         
         {/* Right Column: Stats Cards */}
-        <div className="md:w-3/5 grid md:grid-cols-1 lg:grid-cols-1 gap-8"> {/* Changed to single column for cards, increased gap */}
+        <div className="w-full md:w-3/5 grid grid-cols-1 gap-6 md:gap-8"> {/* Full width on mobile, adjusted gap */}
           {stats.map((stat) => (
             <Card 
               key={stat.id} 
-              className={`rounded-2xl shadow-lg border ${stat.borderColor} ${stat.bgColor} ${stat.textColor} flex flex-col p-6`} // Simplified shadow, consistent padding
+              className={`rounded-2xl shadow-lg border ${stat.borderColor} ${stat.bgColor} ${stat.textColor} flex flex-col p-4 sm:p-6`} // Responsive padding
             >
-              <CardContent className="flex flex-col items-start text-left gap-4">
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${stat.iconBgColor} mb-3`}> {/* Larger icon, rounded-lg */}
-                  <stat.icon className={`h-6 w-6 text-gray-700`} /> {/* Consistent icon color */}
+              <CardContent className="flex flex-col items-start text-left gap-3 sm:gap-4"> {/* Adjusted gap */}
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center ${stat.iconBgColor} mb-2 sm:mb-3`}> {/* Responsive icon container & margin */}
+                  <stat.icon className={`h-5 w-5 sm:h-6 sm:w-6 text-gray-700`} /> {/* Responsive icon size */}
                 </div>
                 
-                <div className={`font-lexend text-2xl font-medium leading-[30px] ${stat.textColor}`}> {/* Added font-lexend, Updated font size, weight, line height */}
+                <div className={`font-lexend text-xl sm:text-2xl font-medium leading-snug sm:leading-[30px] ${stat.textColor}`}> {/* Responsive font size & line height */}
                   {stat.title}
                 </div>
                                 
-                <p className={`font-manrope text-sm font-medium text-[#737171] leading-[20px]`}> {/* Added font-manrope, Updated font size, weight, color, line height */}
+                <p className={`font-manrope text-sm font-medium text-[#737171] leading-relaxed sm:leading-[20px]`}> {/* Adjusted line height */}
                   {stat.description}
                 </p>
                 {stat.id === "captive-advertising" && (
