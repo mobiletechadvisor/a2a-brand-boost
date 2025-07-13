@@ -1,10 +1,10 @@
 
+
 const TrustedBySection = () => {
   const logos = [
     { src: "/img/client-logo-1.png", alt: "AstraZeneca" },
     { src: "/img/client-logo-2.png", alt: "GSK" },
     { src: "/lovable-uploads/1d35c339-73e0-44d9-a9e7-6f891409195b.png", alt: "OncoCare Cancer Centre" },
-    { src: "/img/client-logo-4.png", alt: "Novartis" },
     { src: "/lovable-uploads/e2070788-2561-43e9-8d89-1493eca4e49c.png", alt: "Spritzer" },
     { src: "https://yrnbbkljrdwoyqjpswtv.supabase.co/storage/v1/object/public/assets//img_petronas.png", alt: "Petronas" },
     { src: "/lovable-uploads/3f0667a4-eb5c-41b8-934d-9bb18fb27486.png", alt: "Homesoy" },
@@ -67,3 +67,4 @@ const TrustedBySection = () => {
 };
 
 export default TrustedBySection;
+
