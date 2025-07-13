@@ -78,7 +78,7 @@ const AdvocacyPathSection = () => {
           <div className="md:w-3/5">
             <div className="relative mb-4 sm:mb-6 rounded-xl sm:rounded-2xl overflow-hidden min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] md:min-h-[441px]"> {/* Responsive min-height, margin & border-radius */}
               <img 
-                src="/img/handshake.png" 
+                src="https://yrnbbkljrdwoyqjpswtv.supabase.co/storage/v1/object/public/assets//img-o2o-1.jpeg" 
                 alt="HCP Advocacy" 
                 className="absolute inset-0 w-full h-full object-cover" 
               />
