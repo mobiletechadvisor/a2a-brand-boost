@@ -6,7 +6,7 @@ const TrustedBySection = () => {
     { src: "/lovable-uploads/1d35c339-73e0-44d9-a9e7-6f891409195b.png", alt: "OncoCare Cancer Centre" },
     { src: "/img/client-logo-4.png", alt: "Novartis" },
     { src: "/lovable-uploads/e2070788-2561-43e9-8d89-1493eca4e49c.png", alt: "Spritzer" },
-    { src: "/lovable-uploads/5d156c1d-5734-4dfc-a856-7ce9543f062a.png", alt: "Petronas" },
+    { src: "https://yrnbbkljrdwoyqjpswtv.supabase.co/storage/v1/object/public/assets//img_petronas.png", alt: "Petronas" },
     { src: "/lovable-uploads/3f0667a4-eb5c-41b8-934d-9bb18fb27486.png", alt: "Homesoy" },
     { src: "/lovable-uploads/91c2daba-3a93-4ae4-b84a-141a05465d42.png", alt: "ETiQa" },
     { src: "/lovable-uploads/78d8b872-f2c3-42a4-a725-ad5814deb245.png", alt: "UCSI University" },
